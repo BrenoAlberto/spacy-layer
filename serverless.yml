@@ -3,7 +3,7 @@ service: spacy-layer
 provider:
   name: aws
   stage: ${opt:stage, 'dev'}
-  runtime: python3.9
+  runtime: python3.8
   region: us-east-1
 
 layers:
@@ -11,7 +11,7 @@ layers:
     package:
       artifact: en_core_web_sm.zip
     compatibleRuntimes:
-      - python3.9
+      - python3.8
 
 resources:
   Resources:
